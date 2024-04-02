@@ -28,7 +28,7 @@ const { generate } = require("rxjs");
     {
       type: "input",
       message: "Type the contribution guidelines",
-      name: "guidlines",
+      name: "guidelines",
     },
     {
       type: "input",
@@ -36,13 +36,23 @@ const { generate } = require("rxjs");
       name: "testInstuction",
     },
     {
-      type: "input",
-      message: "Type the License",
+      type: "list",
+      message: "pick your License",
       name: "licenseText",
+      choices:[ "[MIT License](./license/MIT)" , "[GNU GPLv3](./license/GNUGPLv3)" ,"[APACHE](./license/APACHE)"
+
+      ]
     }
     
 ])
+
+
 .then((answers) => {
+    var file = JSON.stringify(answers, null, "  ");
+
+    fs.writeFile("log.txt", `${file}\n`, (err) =>
+      err ? console.error(err) : console.log("File Written!")
+    );
   const readMeContent = generateReadme(answers);
   // TODO: Create a function to write READ
 
@@ -61,26 +71,28 @@ const generateReadme = ({
   testInstruction,
   licenseText
 }) =>
-  `# Project Title:  ${projectTitle} 
+`# Project Title:  ${projectTitle} 
 
-## Description 
+## Description
 ${description}
 
 ## Table of content
-### Installation Instructions
-### Usage 
-### Contribution 
-### Test instruction
-### license 
+- [Installation Instruction](#installInstruction)
+- [Usage](#usage)
+- [Contribution Guidelines](#guidelines)
+- [Test instructio](#testInstruction)
+- [license](#licenseText)
 
 
 
 ## Installation instructions
+\`\`\`bash
 ${installInstruction}
-
+\`\`\`
 ## Usage information
+\`\`\`javascript
 ${usage}
-
+\`\`\`
 ## Contribution Guidlines 
 ${guidelines}
 
@@ -91,8 +103,4 @@ ${testInstruction}
 ${licenseText}
 
 `;
-
-// // TODO: Create a function to initialize app
-
-// // Function call to initialize app
 

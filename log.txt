@@ -1,0 +1,9 @@
+{
+  "projectTitle": "asd",
+  "description": "asd",
+  "installInstruction": "asd",
+  "usage": "asd",
+  "guidelines": "sad",
+  "testInstuction": "asd",
+  "licenseText": "[MIT License](./license/MIT)"
+}
