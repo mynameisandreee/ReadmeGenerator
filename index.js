@@ -117,8 +117,12 @@ If you have any questions about the repo, open an issue or contact [${data.login
 ## Screenshot
 
 ![](assets/readmeGeneratorSC.png)
-`
 
+## Video link
+https://drive.google.com/file/d/1YGlbmimI2z3YwwlYFaQi9fwKA0WtUto3/view?usp=drive_link
+
+
+`
 }
 
 function init() {
