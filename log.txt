@@ -1,9 +1,19 @@
 {
-  "projectTitle": "asd",
-  "description": "asd",
-  "installInstruction": "asd",
-  "usage": "asd",
-  "guidelines": "sad",
-  "testInstuction": "asd",
-  "licenseText": "[MIT License](./license/MIT)"
+  "username": "mynameisandreee",
+  "email": "anthony.santos1824@gmail.com",
+  "projectTitle": "test",
+  "description": "test",
+  "table": [
+    "Installation",
+    "Usage",
+    "License",
+    "Contributing",
+    "Tests",
+    "Questions"
+  ],
+  "installInstruction": "test",
+  "usage": "test",
+  "guidelines": "test",
+  "testInstruction": "test",
+  "licenseText": "MIT"
 }
